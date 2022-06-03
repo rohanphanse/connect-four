@@ -101,7 +101,7 @@ impl Game {
         // Check rows
         for player in players.iter() {
             for r in 0..self.board.height {
-                for c in 0..(self.board.width - self.win_length) {
+                for c in 0..=(self.board.width - self.win_length) {
                     let mut count = 0;
                     for i in c..(c + self.win_length) {
                         if self.board.get(r, i) == *player {
@@ -117,7 +117,7 @@ impl Game {
         // Check columns
         for player in players.iter() {
             for c in 0..self.board.width {
-                for r in 0..(self.board.height - self.win_length) {
+                for r in 0..=(self.board.height - self.win_length) {
                     let mut count = 0;
                     for i in r..(r + self.win_length) {
                         if self.board.get(i, c) == *player {

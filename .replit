@@ -1,0 +1,2 @@
+language = "rust"
+run = "./target/release/connect-four"
