@@ -10,5 +10,5 @@ cargo build --release
 
 Run
 ```
-./target/release/connect-four
+./target/release/connect-four 
 ```
