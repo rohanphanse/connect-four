@@ -1,5 +1,5 @@
 use std::io::stdin;
-use std::env;
+// use std::env;
 
 struct Board {
     height: usize,
@@ -198,6 +198,7 @@ fn get_input(prompt: &str) -> String {
 }
 
 fn select_game() -> Game {
+    print!("\x1B[2J\x1B[1;1H");
     println!("Welcome to Connect Four And More :)");
     println!("By: Rohan Phanse");
     println!();
@@ -216,7 +217,7 @@ fn select_game() -> Game {
 }
 
 fn main() {
-    env::set_var("RUST_BACKTRACE", "1");
+    // env::set_var("RUST_BACKTRACE", "1");
 
     let mut game = select_game();
     loop {
